@@ -174,8 +174,15 @@
 .nav-link:focus,
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: 3px solid var(--secondary-color);
+    outline: 3px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Specific override for navigation links */
+.nav-link:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
 
 /* Screen reader only text */

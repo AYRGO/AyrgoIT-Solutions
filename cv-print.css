@@ -1,0 +1,328 @@
+/* Print-only stylesheet for CV */
+@media print {
+    /* Force layout reset */
+    * {
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        font-family: 'Inter', Arial, sans-serif !important;
+        font-size: 10pt !important;
+        line-height: 1.2 !important;
+        color: #000 !important;
+    }
+    
+    .cv-container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .cv-content {
+        background: white !important;
+        padding: 5px !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    
+    /* Header layout - LEFT-RIGHT STRUCTURE */
+    .cv-header {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 30px !important;
+        margin-bottom: 15px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 2px solid #000 !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+    }
+    
+    /* Left side - photo */
+    .cv-photo {
+        width: 100px !important;
+        height: 125px !important;
+        flex-shrink: 0 !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        display: block !important;
+        margin: 0 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .cv-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    
+    /* Right side - info container */
+    .cv-info {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    .cv-info h1 {
+        font-size: 20pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        margin: 0 0 5pt 0 !important;
+        padding: 0 !important;
+        line-height: 1.1 !important;
+        letter-spacing: 1.5pt !important;
+        text-align: left !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .cv-info h2 {
+        font-size: 13pt !important;
+        font-weight: 400 !important;
+        color: #666 !important;
+        margin: 0 0 12pt 0 !important;
+        padding: 0 !important;
+        line-height: 1.3 !important;
+        text-align: left !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Contact details */
+    .contact-details {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4pt !important;
+        width: 100% !important;
+        align-items: flex-start !important;
+    }
+    
+    .contact-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        font-size: 9pt !important;
+        line-height: 1.3 !important;
+        margin-bottom: 3pt !important;
+        width: 100% !important;
+    }
+    
+    .contact-item .label {
+        font-weight: 600 !important;
+        color: #000 !important;
+        margin-bottom: 1pt !important;
+        font-size: 8pt !important;
+        display: block !important;
+    }
+    
+    .contact-item span:last-child {
+        font-size: 9pt !important;
+        color: #333 !important;
+        word-break: break-word !important;
+        display: block !important;
+    }
+    
+    /* Sections */
+    .cv-section {
+        margin-bottom: 12pt !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .cv-section h3 {
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5pt !important;
+        margin-bottom: 12pt !important;
+        padding-bottom: 4pt !important;
+        border-bottom: 1pt solid #ccc !important;
+        page-break-after: avoid !important;
+    }
+    
+    .cv-section p {
+        font-size: 9pt !important;
+        color: #333 !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10pt !important;
+        text-align: justify !important;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+        display: block !important;
+        columns: 2 !important;
+        column-gap: 20pt !important;
+    }
+    
+    .skill-category {
+        margin-bottom: 10pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    .skill-category h4 {
+        font-size: 9pt !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        margin-bottom: 3pt !important;
+        line-height: 1.2 !important;
+    }
+    
+    .skill-category p {
+        font-size: 8.5pt !important;
+        color: #555 !important;
+        line-height: 1.3 !important;
+        margin-bottom: 8pt !important;
+    }
+    
+    /* Experience */
+    .job {
+        margin-bottom: 10pt !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .job-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        margin-bottom: 5pt !important;
+        gap: 10pt !important;
+    }
+    
+    .job-header h4 {
+        font-size: 10pt !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        line-height: 1.2 !important;
+        flex: 1 !important;
+        margin: 0 !important;
+    }
+    
+    .date {
+        font-size: 9pt !important;
+        font-weight: 500 !important;
+        color: #666 !important;
+        flex-shrink: 0 !important;
+        text-align: right !important;
+        min-width: 120pt !important;
+    }
+    
+    .company {
+        font-size: 9pt !important;
+        font-weight: 500 !important;
+        color: #555 !important;
+        margin-bottom: 8pt !important;
+        font-style: italic !important;
+        line-height: 1.2 !important;
+    }
+    
+    .job ul {
+        margin-left: 15pt !important;
+        margin-bottom: 10pt !important;
+        padding: 0 !important;
+    }
+    
+    .job li {
+        font-size: 8.5pt !important;
+        color: #333 !important;
+        margin-bottom: 3pt !important;
+        line-height: 1.3 !important;
+        text-align: justify !important;
+    }
+    
+    /* Education */
+    .education-item {
+        margin-bottom: 12pt !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .education-item h4 {
+        font-size: 9pt !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        margin-bottom: 2pt !important;
+        line-height: 1.2 !important;
+    }
+    
+    .institution {
+        font-size: 8.5pt !important;
+        color: #555 !important;
+        font-style: italic !important;
+        margin-bottom: 1pt !important;
+    }
+    
+    .honor {
+        font-size: 8.5pt !important;
+        color: #000 !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Certifications */
+    .certifications {
+        display: block !important;
+        columns: 2 !important;
+        column-gap: 20pt !important;
+    }
+    
+    .cert-item {
+        margin-bottom: 10pt !important;
+        padding: 8pt !important;
+        background: #f9f9f9 !important;
+        border-radius: 4pt !important;
+        border-left: 2pt solid #dc2626 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    .cert-item h4 {
+        font-size: 9pt !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        margin-bottom: 2pt !important;
+        line-height: 1.2 !important;
+    }
+    
+    .cert-provider {
+        font-size: 8pt !important;
+        color: #dc2626 !important;
+        font-weight: 500 !important;
+        font-style: italic !important;
+        margin-bottom: 1pt !important;
+    }
+    
+    .cert-date {
+        font-size: 8pt !important;
+        color: #666 !important;
+        font-weight: 400 !important;
+    }
+    
+    /* Hide print controls */
+    .no-print,
+    .controls {
+        display: none !important;
+    }
+    
+    /* Force page breaks */
+    .page-break {
+        page-break-before: always !important;
+    }
+    
+    /* Prevent page breaks within important content */
+    .no-break {
+        page-break-inside: avoid !important;
+    }
+}

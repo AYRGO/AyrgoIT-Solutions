@@ -51,7 +51,7 @@ body {
 /* CV Content */
 .cv-content {
     background: white;
-    padding: 40px;
+    padding: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -61,18 +61,9 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    margin-bottom: 30px;
-    padding-bottom: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 2px solid #000000;
-}
-
-.cv-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    flex-shrink: 0;
-    width: 180px;
 }
 
 .cv-photo {
@@ -81,6 +72,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
 
 .cv-photo img {
@@ -88,6 +80,36 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* CV Info section (right side) */
+.cv-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 150px;
+    padding-left: 0px;
+}
+
+.cv-info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.cv-info h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 .contact-details {
@@ -119,33 +141,9 @@ body {
     color: #333333;
 }
 
-.cv-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 150px;
-}
-
-.cv-right h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #000000;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    line-height: 1.1;
-}
-
-.cv-right h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #666666;
-    line-height: 1.3;
-}
-
 /* Sections */
 .cv-section {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .cv-section h3 {
@@ -192,7 +190,7 @@ body {
 
 /* Experience */
 .job {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     page-break-inside: avoid;
 }
 
@@ -304,211 +302,6 @@ body {
     font-weight: 400;
 }
 
-/* Print Styles */
-@media print {
-    body {
-        background: white;
-        padding: 0;
-        font-size: 10pt;
-        line-height: 1.3;
-        color: black !important;
-    }
-    
-    .no-print {
-        display: none !important;
-    }
-    
-    .cv-container {
-        max-width: none;
-        margin: 0;
-    }
-    
-    .cv-content {
-        box-shadow: none;
-        border-radius: 0;
-        padding: 15px;
-        margin: 0;
-    }
-    
-    .cv-header {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        align-items: flex-start;
-        border-bottom: 1pt solid #000000;
-    }
-    
-    .cv-left {
-        width: 120px;
-        gap: 10px;
-        flex-shrink: 0;
-    }
-    
-    .cv-photo {
-        width: 90px;
-        height: 115px;
-    }
-    
-    .contact-details {
-        gap: 3pt;
-    }
-    
-    .contact-item {
-        font-size: 8pt;
-        margin-bottom: 3pt;
-        line-height: 1.2;
-    }
-    
-    .contact-item .label {
-        font-size: 7pt;
-        margin-bottom: 1pt;
-    }
-    
-    .contact-item span:last-child {
-        font-size: 8pt;
-    }
-    
-    .cv-right {
-        flex: 1;
-    }
-    
-    .cv-right h1 {
-        font-size: 18pt;
-        margin-bottom: 5px;
-        line-height: 1.1;
-        letter-spacing: 1pt;
-    }
-    
-    .cv-right h2 {
-        font-size: 12pt;
-        margin-bottom: 0;
-    }
-    
-    .cv-section {
-        margin-bottom: 15px;
-        page-break-inside: avoid;
-    }
-    
-    .cv-section h3 {
-        font-size: 11pt;
-        page-break-after: avoid;
-        margin-bottom: 10px;
-    }
-    
-    .cv-section p {
-        font-size: 9pt;
-        line-height: 1.3;
-    }
-    
-    .job {
-        page-break-inside: avoid;
-        margin-bottom: 15px;
-    }
-    
-    .job-header {
-        margin-bottom: 5px;
-        flex-wrap: wrap;
-    }
-    
-    .job-header h4 {
-        font-size: 10pt;
-        line-height: 1.2;
-    }
-    
-    .date {
-        font-size: 9pt;
-        min-width: 110px;
-    }
-    
-    .company {
-        font-size: 9pt;
-        margin-bottom: 5px;
-    }
-    
-    .job ul {
-        margin-left: 15px;
-        margin-bottom: 10px;
-    }
-    
-    .job li {
-        font-size: 8.5pt;
-        margin-bottom: 3px;
-        line-height: 1.3;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-    
-    .skill-category {
-        margin-bottom: 8px;
-        page-break-inside: avoid;
-    }
-    
-    .skill-category h4 {
-        font-size: 9pt;
-        margin-bottom: 3px;
-    }
-    
-    .skill-category p {
-        font-size: 8.5pt;
-        line-height: 1.2;
-    }
-    
-    .certifications {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
-
-    .cert-item {
-        margin-bottom: 8px;
-        padding: 6px;
-        page-break-inside: avoid;
-        font-size: 8.5pt;
-    }
-    
-    .cert-item h4 {
-        font-size: 9pt;
-        margin-bottom: 2px;
-    }
-    
-    .cert-provider {
-        font-size: 8.5pt;
-    }
-    
-    .cert-date {
-        font-size: 8pt;
-    }
-    
-    .education-item {
-        margin-bottom: 10px;
-        page-break-inside: avoid;
-    }
-    
-    .education-item h4 {
-        font-size: 9pt;
-    }
-    
-    .institution, .honor {
-        font-size: 8.5pt;
-    }
-    
-    /* Force consistent colors for printing */
-    * {
-        color: black !important;
-    }
-    
-    .cv-right h2, .date, .company, .institution {
-        color: #333333 !important;
-    }
-    
-    .cert-provider {
-        color: #555555 !important;
-    }
-}
-
 /* Mobile Responsive */
 @media (max-width: 768px) {
     body {
@@ -526,42 +319,33 @@ body {
         align-items: center;
     }
     
-    .cv-left {
-        width: 100%;
-        align-items: center;
-    }
-    
     .cv-photo {
         width: 100px;
         height: 125px;
     }
     
+    .cv-info {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .cv-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cv-info h2 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
     .contact-details {
         align-items: center;
-        width: 100%;
     }
     
     .contact-item {
         align-items: center;
         text-align: center;
-        font-size: 0.9rem;
-    }
-    
-    .contact-item .label {
-        margin-bottom: 2px;
-    }
-    
-    .cv-right {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .cv-right h1 {
-        font-size: 1.8rem;
-    }
-    
-    .cv-right h2 {
-        font-size: 1rem;
     }
     
     .skills-grid {
@@ -609,6 +393,6 @@ body {
     }
     
     .cv-info h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
