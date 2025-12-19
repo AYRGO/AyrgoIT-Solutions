@@ -215,7 +215,7 @@ body {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none !important;
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
@@ -223,6 +223,13 @@ body {
     position: relative;
     background: transparent;
     border: none;
+}
+
+/* Show hamburger only on mobile */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none !important;
+    }
 }
 
 .bar {
