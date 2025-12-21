@@ -937,8 +937,12 @@ body {
     font-size: 0.8rem;
 }
 
-.contact-methods .btn i {
-    font-size: 0.75rem;
+.contact-methods .btn i,
+.contact-methods .btn .fas,
+.contact-methods .btn .fa {
+    font-size: 0.85rem !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 /* Footer */
