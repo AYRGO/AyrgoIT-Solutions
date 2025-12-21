@@ -937,6 +937,10 @@ body {
     font-size: 0.8rem;
 }
 
+.contact-methods .btn i {
+    font-size: 0.75rem;
+}
+
 /* Footer */
 .footer {
     background: var(--text-dark);
