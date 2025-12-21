@@ -900,24 +900,24 @@ body {
 }
 
 .form-message i {
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display: block;
 }
 
 .form-message h3 {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .form-message p {
     color: var(--text-light);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
 }
 
 .contact-methods {
